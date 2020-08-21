@@ -2,15 +2,13 @@ import pyttsx3
 import os
 
 pyttsx3.speak("Hello!")
-pyttsx3.speak("What should I do for you?")
-p = (input("\nWhat should I do for you? -  "))
 
 while True:
-    pyttsx3.speak("What else should I do for you?")
-    p = (input("\nWhat else should I do for you? -  "))
+    pyttsx3.speak("What you want to do?")
+    p = (input("\nWhat you want to do? -  "))
     p = p.lower()
     
-    if (('not ' in p) or ("don't" in p) or ('dont' in p) or ('exit' in p) or ('quit' in p) or ('home' in p) or ('back' in p) or ('bye' in p)):
+    if (('not ' in p) or ("don't" in p) or ('dont' in p) or ('exit' in p) or ('quit' in p) or ('home' in p) or ('back' in p) or ('bye' in p) or ('end' in p)):
         pyttsx3.speak("Thank you for using my program. Do recommend changes.")
         print("\nThank you for using my program. Do recommend changes.")
         break
@@ -27,7 +25,7 @@ while True:
         pyttsx3.speak("Opening Mozilla Firefox")
         s.system ("firefox")
     
-    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p)) and (('browser' in p) or ('web' in p))):
+    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p) or ('search' in p)) and (('browser' in p) or ('web' in p))):
         pyttsx3.speak("Which browser do you want to use?")
         s = input("\nWhich browser you want? - ")
         s = s.lower()
@@ -52,11 +50,11 @@ while True:
         pyttsx3.speak("Opening Notepad")
         os.system ("notepad")
     
-    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p)) and ('vlc' in p)):
+    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p) or ('hear' in p)) and ('vlc' in p)):
         pyttsx3.speak("Opening VLC Media Player")
         os.system ("vlc")
 
-    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p) or ('play' in p)) and (('windows' in p) or ('windows media' in p) or ('wm' in p))):
+    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p) or ('play' in p) or ('hear' in p)) and (('windows' in p) or ('windows media' in p) or ('wm' in p))):
         pyttsx3.speak("Opening Windows Media Player")
         os.system ("wmplayer")
     
