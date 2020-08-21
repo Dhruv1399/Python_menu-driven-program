@@ -1,0 +1,84 @@
+import pyttsx3
+import os
+
+pyttsx3.speak("Hello!")
+pyttsx3.speak("What should I do for you?")
+p = (input("\nWhat should I do for you? -  "))
+
+while True:
+    pyttsx3.speak("What else should I do for you?")
+    p = (input("\nWhat else should I do for you? -  "))
+    p = p.lower()
+    
+    if (('not ' in p) or ("don't" in p) or ('dont' in p) or ('exit' in p) or ('quit' in p) or ('home' in p) or ('back' in p) or ('bye' in p)):
+        pyttsx3.speak("Thank you for using my program. Do recommend changes.")
+        print("\nThank you for using my program. Do recommend changes.")
+        break
+
+    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p)) and ('chrome' in p)):
+        pyttsx3.speak("Opening Chrome")
+        os.system("chrome")
+    
+    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p)) and (('microsoft' in p) or ('ms' in p) or ('edge' in p))):
+        pyttsx3.speak("Opening Microsoft Edge")
+        s.system ("msedge")
+    
+    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p)) and (('firefox' in p) or ('mozilla' in p))):
+        pyttsx3.speak("Opening Mozilla Firefox")
+        s.system ("firefox")
+    
+    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p)) and (('browser' in p) or ('web' in p))):
+        pyttsx3.speak("Which browser do you want to use?")
+        s = input("\nWhich browser you want? - ")
+        s = s.lower()
+        
+        if ('chrome' in s):
+            pyttsx3.speak("Opening Chrome")
+            os.system ("chrome")
+
+        elif (('microsoft' in s) or ('ms' in s) or ('edge' in s)):
+            pyttsx3.speak("Opening Microsoft Edge")
+            os.system ("msedge")
+
+        elif (('firefox' in s) or ('mozilla' in s)):
+            pyttsx3.speak("Opening Mozilla Firefox")
+            os.system ("firefox")
+        
+        else:
+            pyttsx3.speak("Sorry! Browser Not found. Please check the spelling.")
+            print("Browser not found. Kindly check the spelling.")
+
+    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p)) and (('notepad' in p) or ('editor' in p))):
+        pyttsx3.speak("Opening Notepad")
+        os.system ("notepad")
+    
+    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p)) and ('vlc' in p)):
+        pyttsx3.speak("Opening VLC Media Player")
+        os.system ("vlc")
+
+    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p) or ('play' in p)) and (('windows' in p) or ('windows media' in p) or ('wm' in p))):
+        pyttsx3.speak("Opening Windows Media Player")
+        os.system ("wmplayer")
+    
+    elif ((('run' in p) or ('open' in p) or ('execute' in p) or ('use' in p) or ('play' in p) or ('hear' in p)) and (('player' in p) or ('music' in p) or ('video' in p) or ('song' in p))):
+        pyttsx3.speak("Which media player do you want to use?")
+        q = input("\nWhich Media Player you want? - ")
+        q = q.lower()
+        
+        if ('vlc' in q):
+            pyttsx3.speak("Opening VLC Media Player")
+            os.system ("vlc")
+
+        elif (('windows media' in p) or ('wm' in p) or ('media' in q)):
+            pyttsx3.speak("Opening Windows Media Player")
+            os.system ("wmplayer")
+        
+        else:
+            pyttsx3.speak("Sorry! media player Not found. please Check the spelling")
+            print(" Media Player not found. Kindly check the speeling.")
+        
+    else:
+        pyttsx3.speak("Sorry! Not found. Recommend to check the spelling.")
+        print("Not found. Please chekc the spelling.")
+    
+
