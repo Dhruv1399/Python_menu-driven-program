@@ -1,6 +1,6 @@
 # Python_menu-driven-program
 The program code is in file "Menu Driven Program"
-This has been outcome of 4 days of my journey in learning Python under mentorship of Mr. Vimal Dagga.
+This has been outcome of 4 days of my journey in learning Python under mentorship of Mr. Vimal Daga.
 
 Problem - Convert OS based program into a menu driven program using Python code which will execute required user query when user gives the input as text.
 
